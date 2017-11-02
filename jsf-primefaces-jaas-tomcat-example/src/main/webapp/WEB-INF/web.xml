@@ -97,16 +97,6 @@
         </auth-constraint>
     </security-constraint>
 
-    <login-config>
-        <auth-method>FORM</auth-method>
-        <form-login-config>
-            <form-login-page>/authentication/login.xhtml</form-login-page>
-            <!-- We don't actually need an error page (since the form does not use j_security_check), but as it is
-            required here, we just repeat the login page -->
-            <form-error-page>/authentication/login.xhtml</form-error-page>
-        </form-login-config>
-    </login-config>
-
     <error-page>
         <error-code>403</error-code>
         <location>/WEB-INF/error-pages/forbidden.xhtml</location>

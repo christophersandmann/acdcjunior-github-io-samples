@@ -1,5 +1,7 @@
 package io.github.acdcjunior.jsfexample.web;
 
+import org.primefaces.event.FileUploadEvent;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -7,16 +9,7 @@ import javax.faces.bean.ViewScoped;
 @ViewScoped
 public class ExampleManagedBean {
 
-    private int actionCounter = 0;
-
-    private String exampleProperty = "Property Value";
-
-    public String getExampleProperty() {
-        return exampleProperty;
+    public void fileUploadListener(FileUploadEvent event) {
+        System.out.println("see the magic happen");
     }
-
-    public void exampleAction() {
-        this.exampleProperty += "######" + actionCounter++;
-    }
-
 }
